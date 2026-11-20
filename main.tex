@@ -1,0 +1,112 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=1.4cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Style ----------
+\definecolor{main}{HTML}{2E5E9E}
+\definecolor{soft}{HTML}{6B6B6B}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.1em, itemsep=1pt, topsep=2pt, parsep=0pt}
+
+% Section title with a rule
+\newcommand{\sect}[1]{%
+  \vspace{7pt}%
+  {\large\bfseries\color{main}\MakeUppercase{#1}}\\[-3pt]
+  {\color{main}\rule{\linewidth}{0.6pt}}\par\vspace{3pt}}
+
+% Entry: title / date / subtitle / description
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill{\color{soft}\small #2}\\
+  {\small\itshape #3}\par
+  #4\par\vspace{5pt}}
+
+% Sidebar item
+\newcommand{\side}[2]{\textbf{#1}\\{\small #2}\par\vspace{4pt}}
+
+\begin{document}
+
+% ---------- Header ----------
+{\Huge\bfseries\color{main} Thomas Evrard}\\[3pt]
+{\large Mechanical Engineering Student --- Applicant, Double Diploma Program Smart Cyber Physical Systems}\\[3pt]
+{\small\color{soft}
+22 years old \quad|\quad +33 6 88 64 53 33 \quad|\quad
+\href{mailto:thomas.evrard@etu.utc.fr}{thomas.evrard@etu.utc.fr} \quad|\quad Driving licence}
+
+\vspace{4pt}
+
+% ---------- Sidebar ----------
+\begin{minipage}[t]{0.29\textwidth}
+
+\sect{Languages}
+\side{English --- C1}{Advanced (Linguaskill)}
+\side{Spanish --- B2}{Intermediate (SIELE)}
+\side{Chinese --- HSK 1}{Beginner}
+
+\sect{Hard Skills}
+\side{CAD}{Creo, CATIA}
+\side{Programming}{Basic knowledge of Arduino, Python and C}
+\side{Software}{Office suite, Power BI}
+
+\sect{Soft Skills}
+Teamwork\\
+Autonomy\\
+Time and stress management
+
+\sect{Interests}
+Aeronautics (aeronautics initiation certificate)\\
+Robotics\\
+Cars
+
+\end{minipage}%
+\hspace{0.015\textwidth}%
+{\color{main}\vrule width 0.4pt}%
+\hspace{0.02\textwidth}%
+% ---------- Main column ----------
+\begin{minipage}[t]{0.65\textwidth}
+
+\sect{Education}
+\entry{Engineering: Mechanical Engineering}{2024--2027}
+  {Third-year master student --- Universit\'e de Technologie de Compi\`egne (UTC)}{}
+\entry{Study abroad semester in China}{2024}
+  {UTSEUS, Shanghai}{}
+\entry{Preparatory science program (integrated engineering track)}{2022--2024}
+  {Universit\'e de Technologie de Troyes (UTT)}{}
+
+\sect{Internship and Projects}
+\entry{Six-month internship at Imateq (railway maintenance) --- Digital Projects}{2025--2026}
+  {Project Manager}
+  {Software deployment (set-up, training facilitation, technical expert), Power BI dashboard, recruitment.}
+\entry{Research Project: Life Cycle Assessment (LCA) of piezoelectric ceramics}{2026}
+  {Conference MATELEC}
+  {Comparison of several LCA software; participation in writing an abstract and making a poster for the conference.}
+\entry{Robotic arm with a conveyor}{}
+  {C programming, MSP432 microcontroller, PixyV2 camera}
+  {Programmed the microcontroller to control the robot and automated it with a camera to grab objects and place them in the desired spot.}
+\entry{Autonomous robot with catapult}{}
+  {Arduino}
+  {Built a line-following robot with a catapult; focus on problem solving and compliance with the specifications.}
+\entry{Tool handling system}{}
+  {CAD design}
+  {Defined specifications, conducted research, followed standards and created CAD models.}
+\entry{Winner of the Innovation Bootcamp --- Biny (automatic waste sorting bin)}{}
+  {Prototype}
+  {Developed a prototype, managed the project timeline, carried out market research.}
+
+\sect{Leadership and Work Experience}
+\entry{Sponsorship team member --- Formula Student Team}{2024}
+  {}{Involved in securing up to \texteuro{}90,000 in funding.}
+\entry{Retail Assistant (1 month) --- Auchan}{2022}
+  {}{Responsible for food department organization and customer service.}
+
+\end{minipage}
+
+\end{document}
